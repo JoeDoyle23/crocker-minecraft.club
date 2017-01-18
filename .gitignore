@@ -38,3 +38,4 @@ jspm_packages
 
 deploy.sh
 deploy.bat
+.env
