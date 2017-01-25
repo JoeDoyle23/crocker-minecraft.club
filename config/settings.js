@@ -7,7 +7,7 @@ module.exports = {
     clientSecret: process.env.FB_CLIENT_SECRET
   },
   google: {
-    clientId: process.env.FB_CLIENT_ID,
-    clientSecret: process.env.FB_CLIENT_SECRET
+    clientId: process.env.GOOGLE_CLIENT_ID,
+    clientSecret: process.env.GOOGLE_CLIENT_SECRET
   }
 };
