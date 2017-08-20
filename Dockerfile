@@ -1,4 +1,4 @@
-FROM node:6-slim
+FROM node:8-slim
 
 ENV NODE_ENV production
 EXPOSE 3001
