@@ -39,7 +39,7 @@ nav a:focus { color: #eee; outline: 0; }
 /***** Top content *****/
 
 .top-content {
-    background: url("/img/header.png") no-repeat center center;
+    background: url("/img/crocker_minecraft_castle.png") no-repeat center center;
     background-size: cover;
     height: 100vh;
   }
