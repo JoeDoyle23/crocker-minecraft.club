@@ -1,0 +1,5 @@
+#! /bin/bash
+
+docker build --tag data-1.galaxy.xnet:5000/crocker-minecraft.club .
+
+docker push data-1.galaxy.xnet:5000/crocker-minecraft.club

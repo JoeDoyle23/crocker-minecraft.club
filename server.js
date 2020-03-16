@@ -1,76 +1,28 @@
 'use strict';
 
 const path = require('path');
-const Hapi = require('hapi');
-const Good = require('good');
-const Inert = require('inert');
+const fastify = require('fastify')({ logger: true, trustProxy: true });
+const fastify_static = require('fastify-static');
 
-// Create a server with a host and port
-const server = new Hapi.Server({
-    connections: {
-        routes: {
-            files: {
-                relativeTo: path.join(__dirname, 'public')
-            }
-        }
-    }
+fastify.register(fastify_static, {
+  root: path.join(__dirname, 'public'),
+  prefix: '/',
 });
 
-server.connection({ 
-  port: 3001 
-});
-
-server.register(Inert, () => {});
-
-// Add the route
-server.route({
-    method: 'GET',
-    path: '/{param*}',
-    handler: {
-        directory: {
-            path: '.',
-            redirectToSlash: true,
-            defaultExtension: 'html',
-            index: true
-        }
-    }
-});
-
-
-// Start the server
-server.register({
-    register: Good,
-    options: {
-        reporters: {
-            console: [{
-                module: 'good-squeeze',
-                name: 'Squeeze',
-                args: [{
-                    response: '*',
-                    log: '*'
-                }]
-            }, {
-                module: 'good-console'
-            }, 'stdout']
-        }
-    }
-}, (err) => {
-
-    if (err) {
-        throw err; // something bad happened loading the plugin
-    }
-
-    server.start((err) => {
-
-        if (err) {
-            throw err;
-        }
-        server.log('info', 'Crocker Minecraft Club Server running at: ' + server.info.uri);
-    });
-});
+const start = async () => {
+  try {
+    await fastify.listen(process.env.PORT || 3001, '0.0.0.0');
+    fastify.log.info(`Crocker Minecraft Club Server running at: ${fastify.server.address().port}`);
+  } catch (err) {
+    fastify.log.error(err);
+    process.exit(1);
+  }
+};
 
 process.on('SIGTERM', () => {
-  server.stop(() =>{
+  server.stop(() => {
     process.exit(0);
   });
 });
+
+start();
