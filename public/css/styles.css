@@ -1,188 +1,237 @@
 * {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
-    margin: 0;
-    padding: 0;
-	background: #fff;
-    font-family: 'Lato', sans-serif;
-    font-weight: 400;
-    color: #666;
-    text-align: center;
+  margin: 0;
+  padding: 0;
+  background: #fff;
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  color: #666;
+  text-align: center;
 }
 
 /***** Top menu *****/
 
 nav {
-	top: 0;
-	left: 0;
-	width: 100%;
-	background: #44f;
-	font-size: 18px;
-	color: #fff;
-    line-height: 32px;
-    text-align: right;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #44f;
+  font-size: 20px;
+  color: #fff;
+  line-height: 48px;
+  text-align: right;
 }
 
 nav a {
-	margin: 0 15px;
-	padding: 10px 0;
-	color: #fff;
+  margin: 0 15px;
+  padding: 10px 0;
+  color: #fff;
+  text-decoration: none;
 }
-nav a:hover { color: #eee; }
-nav a:focus { color: #eee; outline: 0; }
-
+nav a:hover {
+  color: #eee;
+}
+nav a:focus {
+  color: #eee;
+  outline: 0;
+}
 
 /***** Top content *****/
 
 .top-content {
-    background: url("/img/crocker_minecraft_castle.png") no-repeat center center;
-    background-size: cover;
-    height: 100vh;
-  }
-
-.top-content-text {
-	width: 700px;
-	margin: 0 auto;
-	color: #fff;
-    background-color: rgba(32, 32, 32, 0.85);
-    border: 1px solid #fff;
-    padding: 3rem;
-    position: relative;
-    top: 50%;
-    transform: translateY(-50%);
+  background: url('/img/crocker_minecraft_castle.png') no-repeat center center;
+  background-size: cover;
+  height: 100vh;
 }
 
-.top-content-text h1, 
-.top-content-text h1 a, 
-.top-content-text h1 a:hover, 
-.top-content-text h1 a:focus { color: #fff; text-decoration: none; }
+.top-content-text {
+  width: 700px;
+  margin: 0 auto;
+  color: #fff;
+  background-color: rgba(32, 32, 32, 0.85);
+  border: 1px solid #fff;
+  padding: 3rem;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.top-content-text h1,
+.top-content-text h1 a,
+.top-content-text h1 a:hover,
+.top-content-text h1 a:focus {
+  color: #fff;
+  text-decoration: none;
+}
 
 .top-content-text p {
-	opacity: 0.9;
-	margin-top: 40px;
-    font-size: 22px;
-    line-height: 36px;
-    font-style: italic;
+  opacity: 0.9;
+  margin-top: 40px;
+  font-size: 22px;
+  line-height: 36px;
+  font-style: italic;
 }
 
 .top-content-bottom-link {
-	padding-top: 30px;
-	padding-bottom: 7px;
+  padding-top: 30px;
+  padding-bottom: 7px;
 }
-.top-content-bottom-link .big-link-1 { background: none; border: 1px solid #fff; }
+.top-content-bottom-link .big-link-1 {
+  background: none;
+  border: 1px solid #fff;
+}
 
 /***** What we do *****/
 
 .about-box {
-	margin-top: 30px;
+  margin-top: 30px;
 }
 
 .about-box h3 {
-	padding: 10px 0;
+  padding: 10px 0;
 }
 
 .about-box p {
-	font-size: 18px;
-	color: #aaa;
-    line-height: 32px;
+  font-size: 18px;
+  color: #aaa;
+  line-height: 32px;
 }
 
 .about-box .about-box-icon {
-    width: 120px;
-	height: 120px;
-    margin: 0 auto;
-	padding-top: 30px;
-	background: #8ec1cd;
-	-moz-border-radius: 65px; -webkit-border-radius: 65px; border-radius: 65px;
-    font-size: 50px;
-    color: #fff;
-    line-height: 50px;
-    text-align: center;
+  width: 120px;
+  height: 120px;
+  margin: 0 auto;
+  padding-top: 30px;
+  background: #8ec1cd;
+  -moz-border-radius: 65px;
+  -webkit-border-radius: 65px;
+  border-radius: 65px;
+  font-size: 50px;
+  color: #fff;
+  line-height: 50px;
+  text-align: center;
 }
 
-.about-box .about-box-icon i, .about-box .about-box-icon span { 
-    vertical-align: middle; 
+.about-box .about-box-icon i,
+.about-box .about-box-icon span {
+  vertical-align: middle;
 }
 
 /***** Dividers *****/
 
 .divider-1 span {
-	display: block;
-	width: 500px;
-	height: 6px;
-	margin: 0 auto;
-	border-top: 1px solid #aaa;
-	border-bottom: 1px solid #aaa;
+  display: block;
+  width: 500px;
+  height: 6px;
+  margin: 0 auto;
+  border-top: 1px solid #aaa;
+  border-bottom: 1px solid #aaa;
 }
 
 .divider-2 span {
-	display: block;
-	width: 300px;
-	height: 1px;
-	margin: 0 auto;
-	border-bottom: 1px solid #fff;
-	opacity: 0.5;
+  display: block;
+  width: 300px;
+  height: 1px;
+  margin: 0 auto;
+  border-bottom: 1px solid #fff;
+  opacity: 0.5;
 }
 
 /***** General style, all sections *****/
 
 .row {
-    margin-right: -15px;
-    margin-left: -15px;
+  margin-right: -15px;
+  margin-left: -15px;
 }
 
 .section-container {
-    margin: 0 auto;
-    width: 70%;
+  margin: 0 auto;
+  width: 70%;
 }
 
-.section-container-gray { background: #f8f8f8; }
+.section-container-gray {
+  background: #f8f8f8;
+}
 
-.section-container-full-bg, 
-.section-container-full-bg h1, 
-.section-container-full-bg h2, 
-.section-container-full-bg h3, 
-.section-container-full-bg h4 { color: #fff; }
+.section-container-full-bg,
+.section-container-full-bg h1,
+.section-container-full-bg h2,
+.section-container-full-bg h3,
+.section-container-full-bg h4 {
+  color: #fff;
+}
 
 .section-description {
-	margin-top: 60px;
-    padding-bottom: 10px;
+  margin-top: 10px;
+  padding-bottom: 10px;
 }
 
 .section-description-icon {
-	font-size: 56px;
-    color: #ddd;
-    line-height: 56px;
+  font-size: 56px;
+  color: #ddd;
+  line-height: 56px;
 }
 
 .section-description p {
-    margin-top: 30px;
-	padding: 0 120px;
-    font-size: 18px;
-    line-height: 32px;
+  margin-top: 30px;
+  padding: 0 120px;
+  font-size: 18px;
+  line-height: 32px;
 }
 
 .section-bottom-link {
-	padding-top: 30px;
-	padding-bottom: 20px;
+  padding-top: 30px;
+  padding-bottom: 20px;
 }
 
 ol {
-    margin: 0 auto;
-    width: 25%;
-    text-align: left;
+  margin: 0 auto;
+  width: 25%;
+  text-align: left;
 }
 
 ul {
-    margin: 0 auto;
-    width: 55%;
-    text-align: left;
+  margin: 0 auto;
+  width: 55%;
+  text-align: left;
 }
 
 ul li {
-    margin-bottom: 20px;
+  margin-bottom: 20px;
+}
+
+footer {
+  padding: 48px 0;
+  line-height: 96px;
+  color: white;
+  background-color: grey;
+}
+
+.server-rules-container {
+  padding: 25px 0;
+  background-color: #eaeaea;
+  width: 100%;
+}
+
+.join-now-container {
+  padding: 25px 0;
+  background-color: lightgreen;
+  width: 100%;
+}
+
+.servername {
+  color: grey;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.section-description img {
+  width: 100%;
+  max-width: 1000px;
+  height: auto;
 }
