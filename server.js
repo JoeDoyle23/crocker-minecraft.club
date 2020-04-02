@@ -9,6 +9,14 @@ fastify.register(fastify_static, {
   prefix: '/',
 });
 
+fastify.get('/join', function(req, reply) {
+  reply.sendFile('join.html');
+});
+
+fastify.get('/recipes', function(req, reply) {
+  reply.sendFile('recipes.html');
+});
+
 const start = async () => {
   try {
     await fastify.listen(process.env.PORT || 3001, '0.0.0.0');
